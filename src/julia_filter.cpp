@@ -300,10 +300,10 @@ int main(int argc, char *argv[])
         while(ai<argc){
             if(!strcmp("--target-frame-rate",argv[ai])){
                 if(ai+1==argc){
-                    fprintf(stderr, "No number following --max-frames.\n");
+                    fprintf(stderr, "No number following --target-frame-rate.\n");
                     exit(1);
                 }
-                maxFrames=strtod(argv[ai+1], NULL);
+                targetFrameRate=strtod(argv[ai+1], NULL);
                 ai+=2;
             }else if(!strcmp("--jpeg-quality",argv[ai])){
                 if(ai+1==argc){

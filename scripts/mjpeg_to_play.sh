@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ffplay -probesize 32 -f image2pipe -vcodec mjpeg -i -
+ffplay -probesize 1024 -vcodec mjpeg -f image2pipe  -i -
