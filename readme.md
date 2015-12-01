@@ -239,6 +239,34 @@ You may want to play around with `--max-iter`:
 or reduce the width/height:
 
     scripts/video_to_mjpeg.sh media/big_buck_bunny_scene_small.mp4 | bin/julia_filter --width 256 --height 256 | scripts/mjpeg_to_play.sh
+    
+BTW, you can also stream to from an amazon instance. I got an
+instance (IP address 52.90.244.136), and did:
+
+    ssh -A -i aws.ppk admin@52.90.244.136 "git clone https://github.com/HPCE/hpce-2015-cw6 && cd hpce-2015-cw6 && make bin/julia_filter"
+
+Now that I've got it built, I can run it (the -T is to avoid allocating
+a TTY; you'll still need to type in your password):
+
+    ssh -T -A -i aws.ppk admin@52.90.244.136 \
+        "/home/admin/hpce-2015-cw6/bin/julia_filter --no-input --width 256 --height 256 --jpeg-quality 80" \
+        | scripts/mjpeg_to_play.sh
+
+On a good internet connection (e.g. college) this works
+really quite well, with no local CPU load.
+
+You can also stick it in the middle:
+
+    scripts/video_to_mjpeg.sh media/big_buck_bunny_scene_small.mp4 \
+        | ssh -T -A -i aws.ppk admin@52.90.244.136 \
+            "/home/admin/hpce-2015-cw6/bin/julia_filter --width 256 --height 256 --jpeg-quality 80" \
+        | scripts/mjpeg_to_play.sh
+
+Cloud computing!
+
+BTW, note that AWS charges for data in and out of the server.
+It's not a lot, but if you send 100s of GBs of data back and
+forth then eventually it mounts up.
 
 ### Installing FFMPEG
 
