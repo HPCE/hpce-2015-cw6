@@ -1,0 +1,22 @@
+Frames : 10
+Width : 1024
+Height : 1024
+zPow : 2
+MaxIter : 8
+Quality : 100
+Input : 
+# RMSE is calculated over pixel levels (i.e. out of 256), so an error
+# of 2.0 corresponds to an average squared error of 2/256 between the
+# original code and the tested code.
+# 
+# FrameNum, RedRMSE, GreenRMSE, BlueRMSE, GreyRMSE
+0, 0, 0, 0, 0 : No distortion
+1, 0, 0, 0, 0 : No distortion
+2, 0, 0, 0, 0 : No distortion
+3, 0, 0, 0, 0 : No distortion
+4, 0, 0, 0, 0 : No distortion
+5, 0, 0, 0, 0 : No distortion
+6, 0, 0, 0, 0 : No distortion
+7, 0, 0, 0, 0 : No distortion
+8, 0, 0, 0, 0 : No distortion
+9, 0, 0, 0, 0 : No distortion

@@ -1,0 +1,22 @@
+Log dir = logs/hpce-2015-cw6/2015-12-10T15+0000
+
+#### Cloning the implementation.
+Cloning into 'hpce-2015-cw6'...
+Warning: Permanently added the RSA host key for IP address '192.30.252.129' to the list of known hosts.
+### Pulling latest version.
+Already up-to-date.
+
+### Current git hash is:
+ac438f5e0e77071ed1b66713ac63ed8a58014018
+impls/hpce-2015-cw6
+
+### Last commit message is:
+commit 71c99d003c880cd27226e863a1b00eb8bf00c7b0
+Author: m8pple <dt10@imperial.ac.uk>
+Date:   Tue Dec 1 19:45:51 2015 +0000
+
+    Fixed --target-frame-rate option. Thanks to @Dreksh. Closes #2.
+
+#### Building bin/julia_filter
+mkdir -p bin
+g++ -std=c++11 -O3 -g  src/julia_filter.cpp -o bin/julia_filter  -ljpeg
