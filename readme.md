@@ -149,6 +149,13 @@ I'm just giving flexibility). In either platform the environment will
 be a HPCE v3 AMI (which includes libjpeg-dev and ffmpeg, as well as
 TBB and OpenCL).
 
+As per issue #5, before any implementations are built I will further
+provision the instance with:
+
+    sudo apt-get --force-yes install curl autoconf automake libtool nasm yasm
+    
+This will not affect any implementations that don't rely on these tools.
+
 The marks allocation is:
 
 - 10% : Correctness/specification
