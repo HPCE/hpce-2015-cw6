@@ -1,0 +1,18 @@
+Frames : 3
+Width : 128
+Height : 128
+zPow : 3
+MaxIter : 64
+Quality : 96
+Input : walking_small
+COMMAND = (                         cd impls/hpce-2015-cw6 && timeout -k 70 60 bin/julia_filter                         --max-frames 3                         --width 128 --height 128 --zpow 3 --max-iter 64                         --jpeg-quality 96                     ) <input/walking_small.mjpeg >output/hpce-2015-cw6/2015-12-11T00+0000/3_128_128_3_64_walking_small.mjpeg
+Info: width=128, height=128, maxIter=64, maxFrames=3
+      jpegQuality=96, targetFrameRate=25
+# RMSE is calculated over pixel levels (i.e. out of 256), so an error
+# of 2.0 corresponds to an average squared error of 2/256 between the
+# original code and the tested code.
+# 
+# FrameNum, RedRMSE, GreenRMSE, BlueRMSE, GreyRMSE
+0, 0, 0, 0, 0 : No distortion
+1, 0, 0, 0, 0 : No distortion
+2, 0, 0, 0, 0 : No distortion

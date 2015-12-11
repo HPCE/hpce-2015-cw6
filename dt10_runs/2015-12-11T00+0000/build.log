@@ -1,0 +1,25 @@
+Log dir = logs/hpce-2015-cw6/2015-12-11T00+0000
+
+### Pulling latest version.
+You are not currently on a branch. Please specify which
+branch you want to merge with. See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+HEAD is now at 9723b59... Commit 2015-12-10T15+0000
+
+### Current git hash is:
+4c0cb25d5086d6e4e1241d34ade7461ca3b1c90e
+impls/hpce-2015-cw6
+
+### Last commit message is:
+commit 9723b5988e2fa19a359c64ccc611cfa04cbd0845
+Author: m8pple <d.thomas1@imperial.ac.uk>
+Date:   Thu Dec 10 15:28:37 2015 +0000
+
+    Commit 2015-12-10T15+0000
+
+#### Building bin/julia_filter, command is:
+(LD_LIBRARY_PATH=/home/admin/hpce-2015-cw6-marking/impls/hpce-2015-cw6 cd /home/admin/hpce-2015-cw6-marking/impls/hpce-2015-cw6 && make bin/julia_filter -B)
+mkdir -p bin
+g++ -std=c++11 -O3 -g  src/julia_filter.cpp -o bin/julia_filter  -ljpeg
