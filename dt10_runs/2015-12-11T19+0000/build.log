@@ -1,0 +1,20 @@
+Log dir = logs/hpce-2015-cw6/2015-12-11T19+0000
+
+### Pulling latest version.
+Already up-to-date.
+
+### Current git hash is:
+e26e37d3980c7d692ebd80980f9709c0c9940854
+impls/hpce-2015-cw6
+
+### Last commit message is:
+commit 2132c8f47e7dd85eaf2a7a850a9df6ee466c3282
+Author: Debian <admin@ip-172-31-23-39.ec2.internal>
+Date:   Fri Dec 11 19:10:18 2015 +0000
+
+    Commit 2015-12-11T18+0000
+
+#### Building bin/julia_filter, command is:
+(LD_LIBRARY_PATH=/home/admin/hpce-2015-cw6-marking/impls/hpce-2015-cw6 cd /home/admin/hpce-2015-cw6-marking/impls/hpce-2015-cw6 && timeout -k 120 100 make bin/julia_filter -B)
+mkdir -p bin
+g++ -std=c++11 -O3 -g  src/julia_filter.cpp -o bin/julia_filter  -ljpeg
